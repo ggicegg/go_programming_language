@@ -19,7 +19,7 @@ import (
 func main() {
 
 	http.HandleFunc("/", func(writer http.ResponseWriter, request *http.Request) {
-		url := request.UR
+		url := request.URL
 		writer.Write([]byte(url.Path))
 	})
 
